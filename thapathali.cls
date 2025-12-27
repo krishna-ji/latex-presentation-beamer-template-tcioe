@@ -87,3 +87,5 @@
 \setbeamertemplate{navigation symbols}{}
 
 \endinput
+
+% Template Designed by : Krishna Acharya Version 1o
