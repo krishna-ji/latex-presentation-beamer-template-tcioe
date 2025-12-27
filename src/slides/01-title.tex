@@ -1,0 +1,77 @@
+% ============================================
+% TITLE SLIDE
+% ============================================
+% Use theme defaults (no hard-coded colors)
+
+% Default Beamer title page (theme defaults)
+% \begin{frame}[plain]
+%     	\titlepage
+% \end{frame}
+
+\begin{frame}[plain]
+    % 1. HEADER: LOGO AND INSTITUTION
+    \vspace{-0.5em}
+    \begin{center}
+        \begin{minipage}{0.12\textwidth}
+            \IfFileExists{src/images/logo.png}{%
+                \includegraphics[width=\linewidth]{src/images/logo.png}%
+            }{%
+                \begin{tikzpicture}
+                    \node[circle, draw, line width=1pt, text width=1.2cm, align=center, font=\tiny\scshape] {Logo Here};
+                \end{tikzpicture}%
+            }
+        \end{minipage}%
+        \hfill
+        \begin{minipage}{0.82\textwidth}
+            \raggedright
+            {\large \bfseries \InstitutionName}\par
+            {\small \DepartmentName}
+        \end{minipage}
+        \par\noindent\rule{\textwidth}{0.4pt}
+    \end{center}
+
+
+    % 2. TITLE SECTION
+    \begin{center}
+        {\Large \bfseries \ProjectTitle \par}
+        \vspace{0.5em}
+        {\large \ProjectSubtitle \par}
+    \end{center}
+
+
+    % 3. PRESENTERS AND SUPERVISOR
+    \begin{columns}[t, onlytextwidth]
+        \begin{column}{0.55\textwidth}
+            \small
+            \textbf{Project Team}\par
+            \vspace{0.5em}
+            \begin{tabular}{@{}ll@{}}
+                \studentone   & {\footnotesize (\rollone)}   \\
+                \studenttwo   & {\footnotesize (\rolltwo)}   \\
+                \studentthree & {\footnotesize (\rollthree)} \\
+                \studentfour  & {\footnotesize (\rollfour)}  \\
+            \end{tabular}
+        \end{column}
+
+        \begin{column}{0.4\textwidth}
+            \raggedleft
+            \small
+            \textbf{Supervised By}\par
+            \vspace{0.5em}
+            \SupervisorName\par
+            {\footnotesize \SupervisorTitle}\par
+            \vspace{0.5em}
+            \textbf{Date}            {\footnotesize \PresentationDate}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% ============================================
+% PRESENTATION OUTLINES
+% ============================================
+\begin{frame}{Presentation Outlines}
+    \tableofcontents[hideallsubsections]
+\end{frame}
+
+% Start grouping for the outline
+\section{Introduction}
